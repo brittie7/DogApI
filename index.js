@@ -5,11 +5,11 @@
 
 //when the user clicks submit, get the value they entered and put it into a variable
 
-const userInput = document.getElementById("dogPicsRequested").value
 const picArea = $('.newPic')
 
 function startApp () {
   $('#dogForm').on('submit', function(event){
+    const userInput = document.getElementById("dogPicsRequested").value
     console.log('form submitted');
     event.preventDefault(); 
     const newUrl = getUrl(userInput)
