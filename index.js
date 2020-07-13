@@ -12,6 +12,7 @@ function startApp () {
     const userInput = document.getElementById("dogPicsRequested").value
     console.log('form submitted');
     event.preventDefault(); 
+    $('.newPic').empty();
     const newUrl = getUrl(userInput)
     getDogImage(newUrl)
   });
@@ -40,7 +41,7 @@ function displayResults(responseJson){
    $(`<img src="${responseJson.message[i]}" alt="a dog">`).appendTo(picArea);
     $('.results').removeClass('hidden');
   }
-
+//if I store the results as a variable and then replace the 
 };
 
 $(function() {
